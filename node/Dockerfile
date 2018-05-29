@@ -15,10 +15,8 @@ RUN sudo apt install -y autoconf automake build-essential python-dev &&\
 	apt remove -y autoconf automake python-dev &&\
 	apt autoremove -y &&\
 	su -c '\
-		cd $HOME/dotfiles &&\
-		./refresh.sh &&\
-		curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash &&\
+		curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash &&\
 		source ~/.nvm/nvm.sh &&\
-		nvm install 7 &&\
+		nvm install latest &&\
 		npm install -g ember-cli grunt supervisor bower \
 	' michael
