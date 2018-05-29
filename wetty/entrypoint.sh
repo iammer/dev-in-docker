@@ -1,4 +1,5 @@
 #!/bin/bash
 echo "michael:$TERM_PASS" | chpasswd
 cd /srv/wetty
-exec node app.js -p 3000
+NODE=$(ls -1 -d /home/michael/.nvm/versions/node/* | sort | tail -n 1)
+exec $NODE/bin/node app.js -p 3000
