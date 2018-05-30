@@ -15,5 +15,5 @@ RUN su -c '\
 	mv /tmp/wetty /srv &&\
 	chown -R root:root /srv/wetty
 
-ENTRYPOINT ["/entrypoint.sh"]
+CMD ["/entrypoint.sh"]
 
